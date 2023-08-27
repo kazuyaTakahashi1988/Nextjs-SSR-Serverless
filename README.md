@@ -1,7 +1,7 @@
 # AWS CDK sample for Next.js standalone on AWS Lambda
 This is a sample project to deploy Next.js standalone mode to AWS Lambda and Amazon API Gateway.
 
-![Architecture](img/architecture.png)
+![Architecture](public/architecture.png)
 
 ## Deploy
 You need the following tools to deploy this sample:
