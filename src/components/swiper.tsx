@@ -7,7 +7,7 @@ SwiperCore.use([Autoplay, Navigation]);
 /* -------------------------------------------------------
   ▽ 使用imageの配列 ▽
 ---------------------------------------------------------- */
-const images = ["/lambda.png", "/logo-react.png", "/logo-wp.png", "/favicon.ico", "/ogp.jpg", ];
+const images = ["/lambda.png", "/logo-react.png", "/logo-wp.png", "/ogp.jpg"];
 
 const SwiperComp = () => {
   return (
