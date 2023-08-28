@@ -1,5 +1,6 @@
 // pages/server-sitemap.xml/index.tsx
 
+import fetch from "node-fetch";
 import { GetServerSideProps } from 'next'
 import { ISitemapField, getServerSideSitemapLegacy } from 'next-sitemap'
 
