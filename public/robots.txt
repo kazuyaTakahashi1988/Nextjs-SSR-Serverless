@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://cp8txf9bc3.execute-api.ap-northeast-1.amazonaws.com/sitemap.xml
