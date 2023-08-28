@@ -1,38 +1,32 @@
 import fetch from "node-fetch";
-import { Props } from "../lib/props";
-import Layout from "../components/layout";
-import SwiperComp from "../components/swiper";
-import Articles from "../components/articles";
+import { Props } from "../../lib/props";
+import Layout from "../../components/layout";
+import Articles from "../../components/articles";
 
-export const Home = ({ posts }: Props) => {
+export const Post = ({ posts, total }: Props) => {
   
   return (
     <Layout
       /* -------------------------------------------------------
         ▽ 固有 meta ▽
       ---------------------------------------------------------- */
-      pageTtl="Homeのタイトル"
-      // pageDes=""
-      // pageUrl=""
+      pageTtl="Page-1 | Post"
+      pageDes="Page-1のディスクリプション"
+      pageUrl="post"
       // pageKey=""
       // pageThum=""
-      pageType="home"
+      pageType="post"
     >
-
-      {/* -------------------------------------------------------
-        ▽ スワイパースライダー ▽
-      ---------------------------------------------------------- */}
-      <SwiperComp />
 
       {/* -------------------------------------------------------
         ▽ 記事一覧  ▽
       ---------------------------------------------------------- */}
-      <h2 className="sttl">new Post</h2>
+      <h2 className="sttl">new Post - 1</h2>
       <Articles
         posts={posts}
         slug={`post`}
-        total={0}
-        currentNum={0}
+        total={total}
+        currentNum={1}
         postDetail={undefined}
         id={""}
       />
@@ -51,13 +45,15 @@ export const getServerSideProps = async () => {
   const res = await fetch(
     `${process.env.WP_HOST}/wp-json/wp/v2/posts?_embed&per_page=6&cache=${clear}`
   );
+  const total = res.headers.get("x-wp-totalpages");
   const json = await res.json();
   return {
     props: {
       posts: json,
+      total: total,
     },
   };
-
+  
 };
 
-export default Home;
+export default Post;
