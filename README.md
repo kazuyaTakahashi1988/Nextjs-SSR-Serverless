@@ -1,3 +1,9 @@
+以下の方のキットを用いてAWS環境を構築しています。
+手順はこちらをご参考に。
+
+* [https://github.com/tmokmss/nextjs-lambda-cdk](https://github.com/tmokmss/nextjs-lambda-cdk/) 
+
+<!-- 
 # AWS CDK sample for Next.js standalone on AWS Lambda
 This is a sample project to deploy Next.js standalone mode to AWS Lambda and Amazon API Gateway.
 
@@ -32,4 +38,4 @@ You can remove all the AWS resources deployed by this sample running the followi
 
 ```sh
 npx cdk destroy --force
-```
+``` -->
