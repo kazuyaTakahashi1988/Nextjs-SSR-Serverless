@@ -4,7 +4,7 @@ const nextConfig = {
     /* -------------------------------------------------------
       ▽ config情報 ▽
     ---------------------------------------------------------- */
-    SITE_HOST: 'sbyrszdfn8.execute-api.ap-northeast-1.amazonaws.com', // デプロイのホスト
+    SITE_HOST: 'https://sbyrszdfn8.execute-api.ap-northeast-1.amazonaws.com', // デプロイのホスト
     SITE_NAME: 'デフォルトサイトネーム',
     DEFAULT_DES: 'デフォルトディスクリプション',
     DEFAULT_KEY: 'デフォルトキー',

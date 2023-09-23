@@ -13,7 +13,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 
     const res = await fetch(
-    `   ${process.env.WP_HOST}/wp-json/wp/v2/posts?per_page=6&cache=${clear}`
+        `${process.env.WP_HOST}/wp-json/wp/v2/posts?per_page=6&cache=${clear}`
     );
     const total = res.headers.get("x-wp-totalpages");
 
